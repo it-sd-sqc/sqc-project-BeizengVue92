@@ -8,3 +8,4 @@ This site contains information of Greece and Babylon.
 * Anatolian
 * Hellenic
 ## Proposed layout
+![alt text](ProjectProposal.jpg "Layout")
