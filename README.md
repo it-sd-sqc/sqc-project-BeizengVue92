@@ -1,4 +1,7 @@
-# Your project name
-Your given and family name.
+# SQC-Project
+Beizeng Vue
+-----------
 
-A one-sentence description of your project.
+2-5. Checkpoint: A basic web server assignment
+
+[Project link](https://beizeng-vues-sqc-project.onrender.com)
