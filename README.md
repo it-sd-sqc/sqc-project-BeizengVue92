@@ -1,10 +1,13 @@
-# History of Greece and Babylon
+<<<<<<< HEAD
+# SQC-Project
 Beizeng Vue
+-----------
 
-Information on Greece and Babylon's religions.
+2-5. Checkpoint: A basic web server assignment
 
----
-title: History of Greece and Babylon
+[Project link](https://beizeng-vues-sqc-project.onrender.com)
+>>>>>>> dbf8db922f570895b69db7c3daaf6cd8d400acf5
+
 ---
 erDiagram
     chapter ||--|{ page : has
@@ -28,3 +31,4 @@ erDiagram
     }
 
 
+=======
