@@ -25,18 +25,37 @@ const chapterIds = [
 
 
 // Base SQL query
-const sqlHeader = `DROP TABLE IF EXISTS chapters;
+const sqlHeader = `DROP TABLE IF EXISTS chapter;
+DROP TABLE IF EXISTS page;
+DROP TABLE IF EXISTS paragraph;
 
-CREATE TABLE chapters (
+CREATE TABLE chapter (
   chapter_id SERIAL PRIMARY KEY,
-  chapter_title TEXT NOT NULL,
-  chapter_body TEXT NOT NULL
+  title TEXT NOT NULL,
+  total_pages INT NOT NULL
 );
 
+INSERT INTO chapter (title, total_pages) VALUES
+` 
+// CREATE TABLE page (
+//   page_id SERIAL PRIMARY KEY,
+//   chapter_id INT FOREIGN KEY,
+//   page_number INT NOT NULL,
+//   total_paragraphs INT NOT NULL
+// );
 
-INSERT INTO chapters (chapter_title, chapter_synopsis, chapter_body) VALUES
-`
+// CREATE TABLE paragraph (
+//   paragraph_id SERIAL PRIMARY KEY,
+//   page_id INT FOREIGN KEY,
+//   chapter_id INT FOREIGN KEY,
+//   content TEXT NOT NULL,
+//   total_words INT NOT NULL
+// );
 
+// const insertPageSQL = `INSERT INTO page (chapter_id, page_number, total_paragraphs) VALUES
+// `
+// const insertParagraphSQL = `INSERT INTO paragraph (page_id, chapter_id, content, total_words) VALUES
+// `
 
 const gobanConfig = {
   size: 19,
@@ -49,6 +68,19 @@ const gobanConfig = {
 
 // Extraction functions
 const extractTitle = function (root, id) {
-  const title = root.querySelector(`${id} .chap_sub`);
-  return title;
+  const title = root.querySelector(`${id} .chap_sub`)
+  return title
 }
+
+const extractTotalPage = function (root, id) {
+  const totalPage = 0;
+  const pagenum = root.querySelector(`${id} .pagenum`)
+  foreach(pagenum) {
+    totalPage++
+  }
+  return totalPage
+}
+
+// Extract guide chapters.
+const chapters = []
+
