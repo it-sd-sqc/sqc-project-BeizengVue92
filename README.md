@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SQC-Project
 Beizeng Vue
 -----------
