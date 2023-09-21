@@ -25,6 +25,7 @@ erDiagram
         paragraph_id SERIAL pk
         page_id INT fk
         chapter_id INT fk
+        content TEXT "Content of paragraph"
         total_words INT "Total words in paragraph"
     }
 ```
