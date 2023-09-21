@@ -6,9 +6,8 @@ Beizeng Vue
 2-5. Checkpoint: A basic web server assignment
 
 [Project link](https://beizeng-vues-sqc-project.onrender.com)
->>>>>>> dbf8db922f570895b69db7c3daaf6cd8d400acf5
 
----
+```mermaid
 erDiagram
     chapter ||--|{ page : has
     chapter {
@@ -29,6 +28,4 @@ erDiagram
         chapter_id INT fk
         total_words INT "Total words in paragraph"
     }
-
-
-=======
+```
