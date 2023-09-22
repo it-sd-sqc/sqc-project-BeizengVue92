@@ -29,3 +29,4 @@ erDiagram
         total_words INT "Total words in paragraph"
     }
 ```
+Hello from Elijah!
