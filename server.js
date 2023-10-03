@@ -55,6 +55,7 @@ express()
 
 // Routes //////////////////////////////////////////////////
   .get('/', function (req, res) {
+    console.log('Rendering index page')
     res.render('pages/index')
   })
   .get('/about', function (req, res) {
@@ -65,6 +66,7 @@ express()
     res.render('pages/toc', { title: 'Guide ToC', chapters })
   })
   .get('/guide/:ch(\\d+)', async function (req, res) {
+    debugger
     const chapter = await queryChapter(req.params.ch)
     if (chapter?.title) {
       res.render('pages/guide', chapter)
