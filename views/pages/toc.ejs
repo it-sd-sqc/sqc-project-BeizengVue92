@@ -1,0 +1,14 @@
+<%- include('../shared/header.ejs') _%>
+<article>
+  <h2>Table of contents</h2>
+  <ol>
+    <% chapters.forEach((chapter) => { %>
+      <li><a href="/guide/<%= chapter.id %>"><%= chapter.title %></a></li>
+    <% }) %>
+  </ol>
+  <footer>
+    <a href="/guide/1">Next</a>
+    <p>&copy; 2023 Beizeng Vue Software Quality Control - Greece &amp; Babylon</p>
+  </footer>
+</article>
+<%- include('../shared/footer.ejs') _%>
