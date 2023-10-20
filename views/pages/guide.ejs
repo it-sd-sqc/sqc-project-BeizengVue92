@@ -1,6 +1,7 @@
 <%- include('../shared/header.ejs') _%>
 <article>
   <h2><%= title %></h2>
+  <%- body %>
   <footer>
   <% if (id > 1) { %>
     <a href="/guide/<%= (id - 1) %>">Prev</a>
@@ -8,6 +9,7 @@
   <% if (id < total) { %>
     <a href="/guide/<%= (id + 1) %>">Next</a>
   <% } %>
+    <p>&copy; 2023 Beizeng Vue Software Quality Control - Greece & Babylon</p>
   </footer>
 </article>
 <%- include('../shared/footer.ejs') _%>

@@ -55,18 +55,16 @@ express()
 
 // Routes //////////////////////////////////////////////////
   .get('/', function (req, res) {
-    console.log('Rendering index page')
     res.render('pages/index')
   })
   .get('/about', function (req, res) {
     res.render('pages/about', { title: 'About' })
   })
   .get('/guide', async function (req, res) {
-    const chapters = await queryChapters()
+    const chapters = await queryChapters(req.params.ch)
     res.render('pages/toc', { title: 'Guide ToC', chapters })
   })
   .get('/guide/:ch(\\d+)', async function (req, res) {
-    debugger
     const chapter = await queryChapter(req.params.ch)
     if (chapter?.title) {
       res.render('pages/guide', chapter)
@@ -74,6 +72,7 @@ express()
       res.redirect('/guide')
     }
   })
+  
 
 // Ready for browsers to connect ///////////////////////////
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
