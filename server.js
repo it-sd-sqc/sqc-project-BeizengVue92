@@ -72,7 +72,6 @@ express()
       res.redirect('/guide')
     }
   })
-  
 
 // Ready for browsers to connect ///////////////////////////
   .listen(PORT, () => console.log(`Listening on ${PORT}`))

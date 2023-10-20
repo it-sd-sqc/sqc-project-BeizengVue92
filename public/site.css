@@ -15,14 +15,14 @@ main {
   margin: 20px auto;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
 
 header {
   background-color: #68B0AB;
   color: #fff;
   text-align: center;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 h1, h2 {
@@ -65,11 +65,11 @@ footer {
 
 body.dark-mode {
   background-color: #333;
-  color: #ffffff;
+  color: #fff;
 }
 
 body.dark-mode a {
-  color: #ffffff;
+  color: #fff;
 }
 
 body.dark-mode header {
@@ -81,10 +81,10 @@ body.dark-mode main {
 }
 
 body.dark-mode h2 {
-  color: #ffffff;
+  color: #fff;
 }
 
 body.dark-mode footer {
   border-top-color: #555;
-  color: #ffffff;
+  color: #fff;
 }

@@ -40,22 +40,22 @@ const extractTitle = function (root, id) {
 }
 
 const extractBody = function (root, id) {
-  const titleIdNode = root.querySelector(`h3#${id}`);
+  const titleIdNode = root.querySelector(`h3#${id}`)
 
   if (titleIdNode) {
-    const content = [];
+    const content = []
     let currentNode = titleIdNode.nextElementSibling
 
     while (currentNode && currentNode.tagName !== 'H3') {
-      const paragraphText = currentNode.innerText.replace(/\n\s*\n/g, '\n');
-      content.push(paragraphText);
+      const paragraphText = currentNode.innerText.replace(/\n\s*\n/g, '\n')
+      content.push(paragraphText)
       currentNode = currentNode.nextElementSibling
     }
-    return content.join(' ');
+    return content.join(' ')
   } else {
-    return null;
+    return null
   }
-};
+}
 
 // Conversion //////////////////////////////////////////////
 const src = readFileSync(srcPath, 'utf8')
